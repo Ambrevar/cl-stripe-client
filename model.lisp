@@ -447,6 +447,9 @@ bracketed arrays."
 (defmodel deleted-recipient (deleted-object)
   ())
 
+(defmodel deleted-product (deleted-object)
+  ())
+
 (defmodel account (api-resource)
   (charge-enabled
    details-submitted
@@ -745,3 +748,17 @@ bracketed arrays."
 (defmodel transfer-transaction (stripe-object)
   (amount net type created description fee)
   (:simple-methods list))
+
+(defmodel product (api-resource)
+  (description
+   name
+   caption
+   type
+   plan
+   package-dimensions
+   images
+   shippable
+   attributes)
+  (:default-initargs :attributes '())
+  (:deleted-class deleted-product)
+  (:simple-methods create retrieve update delete list))
