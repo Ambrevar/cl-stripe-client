@@ -587,7 +587,7 @@ bracketed arrays."
    next-recurring-charge
    subscription
    subscriptions
-   deliquent
+   delinquent
    account-balance
    cards)
   (:default-initargs :cards '())
