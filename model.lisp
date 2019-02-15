@@ -670,7 +670,6 @@ bracketed arrays."
    ;; lines ; TODO: This seems broken with the recent API (Feb 2019).
    invoice-pdf
    attempt-count currency)
-  (:default-initargs :lines nil)
   (:simple-methods create retrieve update delete list))
 
 (defun upcoming-invoice (params)
