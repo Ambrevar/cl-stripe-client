@@ -724,7 +724,8 @@ bracketed arrays."
    plan
    canceled-at
    ended-at
-   quantity))
+   quantity)
+  (:simple-methods create retrieve update delete list))
 
 (defmodel summary (stripe-object)
   (charge-feeds
